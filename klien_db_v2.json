@@ -1,0 +1,620 @@
+{
+    "users": {
+        "doctor@klien.com": {
+            "password": "password123",
+            "role": "Doctor"
+        },
+        "admin@klien.com": {
+            "password": "admin123",
+            "role": "Medical Data Specialist"
+        }
+    },
+    "patients": {
+        "ABHA-1234": {
+            "name": "John Doe",
+            "age": 54,
+            "diagnosis": "Type 2 Diabetes, Hypertension",
+            "medications": [
+                "Metformin",
+                "Lisinopril"
+            ],
+            "prescriptions": []
+        },
+        "123": {
+            "name": "tom",
+            "age": 30,
+            "diagnosis": "fever",
+            "medications": [
+                "paracetamol",
+                "vitamin c",
+                "warfarin",
+                "aspirin"
+            ],
+            "prescriptions": [
+                {
+                    "medicine": "warfarin",
+                    "dosage": "500 mg",
+                    "frequency": "once daily",
+                    "status": "\u2713 you could give this medication",
+                    "timestamp": "2026-10-31 22:27",
+                    "clearance_time": "2026-11-01 10:27"
+                },
+                {
+                    "medicine": "aspirin",
+                    "dosage": "N/A",
+                    "frequency": "Override Action",
+                    "status": "\u26a0 Clinical Override Issued",
+                    "timestamp": "2026-10-31 22:28",
+                    "clearance_time": "2026-11-01 22:28"
+                }
+            ]
+        },
+        "456": {
+            "name": "john",
+            "age": 31,
+            "diagnosis": "fever, cough",
+            "medications": [
+                "paracetamol",
+                "azithromycin",
+                "aspirin",
+                "Atorvastatin"
+            ],
+            "prescriptions": [
+                {
+                    "medicine": "azithromycin",
+                    "dosage": "500mg",
+                    "frequency": "twice daily",
+                    "status": "\u2713 you could give this medication",
+                    "timestamp": "2026-08-12 17:54",
+                    "clearance_time": "2026-08-13 05:54"
+                },
+                {
+                    "medicine": "warfin",
+                    "dosage": "100 mg",
+                    "frequency": "once daily",
+                    "status": "\u2713 you could give this medication",
+                    "timestamp": "2026-08-12 17:57",
+                    "clearance_time": "2026-08-13 05:57"
+                },
+                {
+                    "medicine": "aspirin",
+                    "dosage": "200 mg",
+                    "frequency": "once",
+                    "status": "\u2713 you could give this medication",
+                    "timestamp": "2026-08-12 17:57",
+                    "clearance_time": "2026-08-13 05:57"
+                },
+                {
+                    "medicine": "cranberrry juice",
+                    "dosage": "100 ml",
+                    "frequency": "twice daily",
+                    "status": "\u2713 you could give this medication",
+                    "timestamp": "2026-08-12 18:04",
+                    "clearance_time": "2026-08-13 06:04"
+                },
+                {
+                    "medicine": "Atorvastatin",
+                    "dosage": "N/A",
+                    "frequency": "Override Action",
+                    "status": "\u26a0 Clinical Override Issued",
+                    "timestamp": "2026-08-12 18:07",
+                    "clearance_time": "2026-08-13 18:07"
+                }
+            ]
+        },
+        "1234": {
+            "name": "Moideen",
+            "age": 45,
+            "diagnosis": "fever, cough, bp",
+            "medications": [
+                "Warfarin",
+                "Paracetamol",
+                "Methotrexate",
+                "Fluoxetine"
+            ],
+            "prescriptions": []
+        }
+    },
+    "interaction_rules": [
+        {
+            "medicine_a": "Metformin",
+            "medicine_b": "Contrast Dye",
+            "description": "High Risk of Metformin-associated Lactic Acidosis."
+        },
+        {
+            "medicine_a": "Aspirin",
+            "medicine_b": "Warfarin",
+            "description": "Severe Risk of Internal Bleeding due to antiplatelet amplification."
+        },
+        {
+            "medicine_a": "Ibuprofen",
+            "medicine_b": "Aspirin",
+            "description": "Decreases cardioprotection and increases gastrointestinal bleeding risks."
+        },
+        {
+            "medicine_a": "Simvastatin",
+            "medicine_b": "Amlodipine",
+            "description": "Amplifies simvastatin concentration elevating rhabdomyolysis risks."
+        },
+        {
+            "medicine_a": "Sildenafil",
+            "medicine_b": "Nitroglycerin",
+            "description": "Causes extreme life-threatening hypotension."
+        },
+        {
+            "medicine_a": "Amoxicillin",
+            "medicine_b": "Methotrexate",
+            "description": "Reduced clearance significantly increasing bone marrow toxicity risk."
+        },
+        {
+            "medicine_a": "Ciprofloxacin",
+            "medicine_b": "Tizanidine",
+            "description": "CYP1A2 inhibitor pathway causing extreme tizanidine drowsiness."
+        },
+        {
+            "medicine_a": "Clopidogrel",
+            "medicine_b": "Omeprazole",
+            "description": "Omeprazole blocks activation increasing arterial clotting risks."
+        },
+        {
+            "medicine_a": "Tramadol",
+            "medicine_b": "Fluoxetine",
+            "description": "Triggers Serotonin Syndrome causing severe neurometabolic instability."
+        },
+        {
+            "medicine_a": "Lisinopril",
+            "medicine_b": "Spironolactone",
+            "description": "Induces severe hyperkalemia (dangerously high blood potassium levels)."
+        },
+        {
+            "medicine_a": "Levofloxacin",
+            "medicine_b": "Amiodarone",
+            "description": "Causes significant QT interval prolongation risking severe ventricular arrhythmias."
+        },
+        {
+            "medicine_a": "Azithromycin",
+            "medicine_b": "Atorvastatin",
+            "description": "Increases exposure to statins elevating risk of acute muscle breakdown."
+        },
+        {
+            "medicine_a": "Warfarin",
+            "medicine_b": "Cranberry Juice",
+            "description": "Enhances anticoagulant effect leading to elevated INR metrics and bleeding."
+        },
+        {
+            "medicine_a": "Clarithromycin",
+            "medicine_b": "Colchicine",
+            "description": "Inhibits P-glycoprotein pathway causing acute life-threatening colchicine toxicity."
+        },
+        {
+            "medicine_a": "Methotrexate",
+            "medicine_b": "Naproxen",
+            "description": "Displaces methotrexate from binding sites precipitating acute renal damage."
+        },
+        {
+            "medicine_a": "Digoxin",
+            "medicine_b": "Furosemide",
+            "description": "Furosemide-induced hypokalemia greatly amplifies the risk of fatal digoxin toxicity."
+        },
+        {
+            "medicine_a": "Spironolactone",
+            "medicine_b": "Potassium Chloride",
+            "description": "Extreme risk of severe hyperkalemia leading to cardiac arrest."
+        },
+        {
+            "medicine_a": "Sertraline",
+            "medicine_b": "Phenelzine",
+            "description": "Absolute contraindication; high risk of severe fatal Serotonin Syndrome."
+        },
+        {
+            "medicine_a": "Ketoconazole",
+            "medicine_b": "Alprazolam",
+            "description": "Strongly inhibits CYP3A4 causing profound prolonged sedation."
+        },
+        {
+            "medicine_a": "Rifampin",
+            "medicine_b": "Oral Contraceptives",
+            "description": "Drastically reduces hormone levels leading to contraceptive failure."
+        },
+        {
+            "medicine_a": "Carbamazepine",
+            "medicine_b": "Erythromycin",
+            "description": "Erythromycin halts carbamazepine metabolism causing neurotoxic poisoning."
+        },
+        {
+            "medicine_a": "Lithium",
+            "medicine_b": "Hydrochlorothiazide",
+            "description": "Reduces renal clearance of lithium leading to severe lithium toxicity."
+        },
+        {
+            "medicine_a": "Phenytoin",
+            "medicine_b": "Amiodarone",
+            "description": "Increases phenytoin serum levels risking severe ataxia and nystagmus."
+        },
+        {
+            "medicine_a": "Propranolol",
+            "medicine_b": "Albuterol",
+            "description": "Antagonistic effects; propranolol blocks albuterol's bronchodilation causing severe bronchospasm."
+        },
+        {
+            "medicine_a": "Verapamil",
+            "medicine_b": "Atenolol",
+            "description": "Dual beta-blocker/calcium channel blocker action causing severe bradycardia and heart block."
+        },
+        {
+            "medicine_a": "Cyclosporine",
+            "medicine_b": "St. John's Wort",
+            "description": "St. John's Wort drastically lowers cyclosporine levels risking transplant organ rejection."
+        },
+        {
+            "medicine_a": "Theophylline",
+            "medicine_b": "Ciprofloxacin",
+            "description": "Ciprofloxacin increases theophylline levels risking central nervous system toxicity and seizures."
+        },
+        {
+            "medicine_a": "Allopurinol",
+            "medicine_b": "Azathioprine",
+            "description": "Inhibits azathioprine metabolism causing severe life-threatening bone marrow suppression."
+        },
+        {
+            "medicine_a": "Metoclopramide",
+            "medicine_b": "Venlafaxine",
+            "description": "Increases the risk of extrapyramidal symptoms and movement disorders."
+        },
+        {
+            "medicine_a": "Diltiazem",
+            "medicine_b": "Cyclosporine",
+            "description": "Increases cyclosporine levels leading to severe nephrotoxicity kidney damage."
+        },
+        {
+            "medicine_a": "Ginkgo Biloba",
+            "medicine_b": "Enoxaparin",
+            "description": "Plant extracts amplify antiplatelet activity increasing spontaneous bleeding risks."
+        },
+        {
+            "medicine_a": "Doxycycline",
+            "medicine_b": "Calcium Carbonate",
+            "description": "Calcium chelates doxycycline severely reducing antibiotic absorption and efficacy."
+        },
+        {
+            "medicine_a": "Levothyroxine",
+            "medicine_b": "Ferrous Sulfate",
+            "description": "Iron supplements bind to thyroid hormones preventing proper absorption."
+        },
+        {
+            "medicine_a": "Omeprazole",
+            "medicine_b": "Ketoconazole",
+            "description": "Increases gastric pH rendering ketoconazole completely insoluble and ineffective."
+        },
+        {
+            "medicine_a": "Gabapentin",
+            "medicine_b": "Morphine",
+            "description": "Morphine increases gabapentin central nervous system depression risking respiratory failure."
+        },
+        {
+            "medicine_a": "Alprazolam",
+            "medicine_b": "Zolpidem",
+            "description": "Additive central nervous system depressant effects; high risk of severe sedation and apnea."
+        },
+        {
+            "medicine_a": "Glimepiride",
+            "medicine_b": "Miconazole",
+            "description": "Severe dangerous hypoglycemia blood sugar crash due to metabolic inhibition."
+        },
+        {
+            "medicine_a": "Losartan",
+            "medicine_b": "Ibuprofen",
+            "description": "NSAIDs blunt the antihypertensive effect of ARBs and accelerate renal impairment."
+        },
+        {
+            "medicine_a": "Amiodarone",
+            "medicine_b": "Warfarin",
+            "description": "Amiodarone inhibits warfarin clearance doubling or tripling bleeding risks."
+        },
+        {
+            "medicine_a": "Fluconazole",
+            "medicine_b": "Quinidine",
+            "description": "Elevates quinidine concentrations causing dangerous Torsades de Pointes arrhythmias."
+        },
+        {
+            "medicine_a": "Paracetamol",
+            "medicine_b": "Alcohol",
+            "description": "Chronic alcohol consumption amplifies toxic metabolite formation risking acute liver failure."
+        },
+        {
+            "medicine_a": "Atorvastatin",
+            "medicine_b": "Gemfibrozil",
+            "description": "Severely increases the risk of severe myopathy and rhabdomyolysis."
+        },
+        {
+            "medicine_a": "Prednisone",
+            "medicine_b": "Ibuprofen",
+            "description": "Synergistic destruction of gastric mucosa severely risking peptic ulcers and GI perforation."
+        },
+        {
+            "medicine_a": "Enalapril",
+            "medicine_b": "Aliskiren",
+            "description": "Dual renin-angiotensin blockade causing profound hypotension and acute renal failure."
+        },
+        {
+            "medicine_a": "Citalopram",
+            "medicine_b": "Tramadol",
+            "description": "Combined serotonergic action heavily increases the risk of grand mal seizures."
+        },
+        {
+            "medicine_a": "Metronidazole",
+            "medicine_b": "Alcohol",
+            "description": "Triggers a severe disulfiram-like reaction causing severe nausea tachycardia and vomiting."
+        },
+        {
+            "medicine_a": "Linezolid",
+            "medicine_b": "Pseudoephedrine",
+            "description": "Linezolid acts as an MAOI; combined with pseudoephedrine it causes a hypertensive crisis."
+        },
+        {
+            "medicine_a": "Levofloxacin",
+            "medicine_b": "Zinc Sulfate",
+            "description": "Zinc binds the fluoroquinolone causing severe therapeutic antibiotic failure."
+        },
+        {
+            "medicine_a": "Clonidine",
+            "medicine_b": "Amitriptyline",
+            "description": "Amitriptyline blocks clonidine's centrally acting antihypertensive mechanism raising blood pressure."
+        },
+        {
+            "medicine_a": "Memantine",
+            "medicine_b": "Sodium Bicarbonate",
+            "description": "Urinary alkalinizers reduce memantine clearance risking severe confusion and psychosis."
+        },
+        {
+            "medicine_a": "Gliclazide",
+            "medicine_b": "Co-trimoxazole",
+            "description": "Sulfa antibiotics displace sulfonylureas provoking severe hypoglycemic shock."
+        },
+        {
+            "medicine_a": "Duloxetine",
+            "medicine_b": "Aspirin",
+            "description": "Increases risk of upper gastrointestinal bleeding due to antiplatelet amplification."
+        },
+        {
+            "medicine_a": "Haloperidol",
+            "medicine_b": "Erythromycin",
+            "description": "Combined effects cause additive QT interval prolongation and cardiac arrest."
+        },
+        {
+            "medicine_a": "Tacrolimus",
+            "medicine_b": "Grapefruit Juice",
+            "description": "Grapefruit compounds destroy CYP3A4 enzymes causing toxic tacrolimus spikes."
+        },
+        {
+            "medicine_a": "Meloxicam",
+            "medicine_b": "Warfarin",
+            "description": "Extreme risk of catastrophic gastrointestinal hemorrhage."
+        },
+        {
+            "medicine_a": "Lithium",
+            "medicine_b": "Ibuprofen",
+            "description": "NSAIDs reduce renal blood flow causing lithium levels to skyrocket into toxicity."
+        },
+        {
+            "medicine_a": "Carvedilol",
+            "medicine_b": "Clonidine",
+            "description": "Abrupt withdrawal of clonidine while on carvedilol causes a fatal rebound hypertensive crisis."
+        },
+        {
+            "medicine_a": "Phenobarbital",
+            "medicine_b": "Warfarin",
+            "description": "Phenobarbital induces liver enzymes accelerating warfarin clearance and risking stroke."
+        },
+        {
+            "medicine_a": "Loratadine",
+            "medicine_b": "Ketoconazole",
+            "description": "Elevates antihistamine levels increasing risks of drowsiness and cardiac changes."
+        },
+        {
+            "medicine_a": "Montelukast",
+            "medicine_b": "Phenytoin",
+            "description": "Phenytoin reduces montelukast efficacy risking severe asthma exacerbations."
+        },
+        {
+            "medicine_a": "Risperidone",
+            "medicine_b": "Fluoxetine",
+            "description": "Fluoxetine inhibits risperidone breakdown augmenting extrapyramidal motor side effects."
+        },
+        {
+            "medicine_a": "Pioglitazone",
+            "medicine_b": "Rifampin",
+            "description": "Rifampin induces CYP2C8 drastically reducing the efficacy of the antidiabetic drug."
+        },
+        {
+            "medicine_a": "Isotretinoin",
+            "medicine_b": "Vitamin A",
+            "description": "Direct compounding of retinoid toxicity risking severe intracranial hypertension."
+        },
+        {
+            "medicine_a": "Sulfamethoxazole",
+            "medicine_b": "Warfarin",
+            "description": "Displaces warfarin from proteins severely increasing prothrombin time and bleeding."
+        },
+        {
+            "medicine_a": "Bupropion",
+            "medicine_b": "Selegiline",
+            "description": "Extreme risk of fatal hypertensive crisis and neurotoxicity."
+        },
+        {
+            "medicine_a": "Venlafaxine",
+            "medicine_b": "Phenelzine",
+            "description": "Serotonin syndrome accelerator pathway; absolute clinical contraindication."
+        },
+        {
+            "medicine_a": "Levalbuterol",
+            "medicine_b": "Carvedilol",
+            "description": "Antagonistic actions destroy respiratory airflow optimization."
+        },
+        {
+            "medicine_a": "Cefradine",
+            "medicine_b": "Furosemide",
+            "description": "Compounded loop-diuretic nephrotoxicity accelerating acute kidney injury."
+        },
+        {
+            "medicine_a": "Nitrofurantoin",
+            "medicine_b": "Probenecid",
+            "description": "Probenecid blocks nitrofurantoin excretion into urine rendering it useless for UTIs."
+        },
+        {
+            "medicine_a": "Rivaroxaban",
+            "medicine_b": "Ketoconazole",
+            "description": "Drastically elevates rivaroxaban levels causing severe systemic internal bleeding."
+        },
+        {
+            "medicine_a": "Apixaban",
+            "medicine_b": "Carbamazepine",
+            "description": "Carbamazepine induces clearance leaving the patient unprotected against strokes."
+        },
+        {
+            "medicine_a": "Dabigatran",
+            "medicine_b": "Rifampin",
+            "description": "Reduces dabigatran exposure by over 60% causing complete anticoagulant failure."
+        },
+        {
+            "medicine_a": "Topiramate",
+            "medicine_b": "Acetazolamide",
+            "description": "Combined carbonic anhydrase inhibition increases the risk of severe kidney stones."
+        },
+        {
+            "medicine_a": "Valproic Acid",
+            "medicine_b": "Meropenem",
+            "description": "Carbapenems rapidly drop valproic acid levels below therapeutic ranges causing seizures."
+        },
+        {
+            "medicine_a": "Lamotrigine",
+            "medicine_b": "Valproic Acid",
+            "description": "Valproate inhibits lamotrigine clearance risking fatal Stevens-Johnson Syndrome rash."
+        },
+        {
+            "medicine_a": "Levodopa",
+            "medicine_b": "Pyridoxine",
+            "description": "Vitamin B6 accelerates peripheral breakdown of levodopa rendering it useless for Parkinson's."
+        },
+        {
+            "medicine_a": "Selegiline",
+            "medicine_b": "Meperidine",
+            "description": "Absolute contraindication; causes severe fatal excitation hyperpyrexia and death."
+        },
+        {
+            "medicine_a": "Sumatriptan",
+            "medicine_b": "Escitalopram",
+            "description": "Dual serotonergic acceleration pathways risk acute Serotonin Syndrome."
+        },
+        {
+            "medicine_a": "Methadone",
+            "medicine_b": "Ritonavir",
+            "description": "Protease inhibitors alter methadone clearance provoking acute opioid withdrawal."
+        },
+        {
+            "medicine_a": "Oxycodone",
+            "medicine_b": "Clarithromycin",
+            "description": "Blocks oxycodone metabolism risking fatal narcotic overdose and respiratory arrest."
+        },
+        {
+            "medicine_a": "Fentanyl",
+            "medicine_b": "Ketoconazole",
+            "description": "Potent CYP3A4 inhibition risks immediate opioid overdose and fatal respiratory failure."
+        },
+        {
+            "medicine_a": "Azathioprine",
+            "medicine_b": "Sulfasalazine",
+            "description": "Increases the risk of severe life-threatening leukopenia and bone marrow failure."
+        },
+        {
+            "medicine_a": "Spironolactone",
+            "medicine_b": "Losartan",
+            "description": "Compounded potassium-sparing mechanisms can precipitate severe hyperkalemia."
+        },
+        {
+            "medicine_a": "Ramipril",
+            "medicine_b": "Aliskiren",
+            "description": "Contraindicated in diabetic patients due to excessive renal system stress."
+        },
+        {
+            "medicine_a": "Valsartan",
+            "medicine_b": "Potassium Citrate",
+            "description": "Increases the risk of dangerous cardiac arrhythmias from hyperkalemia."
+        },
+        {
+            "medicine_a": "Hydralazine",
+            "medicine_b": "Indomethacin",
+            "description": "NSAIDs counteract vasodilatory effects by blocking prostaglandin synthesis."
+        },
+        {
+            "medicine_a": "Hydrochlorothiazide",
+            "medicine_b": "Calcium Carbonate",
+            "description": "Induces Milk-Alkali Syndrome causing severe hypercalcemia and kidney injury."
+        },
+        {
+            "medicine_a": "Metformin",
+            "medicine_b": "Topiramate",
+            "description": "Both drugs increase systemic acid levels heavily accelerating metabolic acidosis."
+        },
+        {
+            "medicine_a": "Sitagliptin",
+            "medicine_b": "Digoxin",
+            "description": "Sitagliptin slightly elevates digoxin levels; requires close therapeutic monitoring."
+        },
+        {
+            "medicine_a": "Acarbose",
+            "medicine_b": "Neomycin",
+            "description": "Co-administration leads to severe enhanced gastrointestinal side effects and malabsorption."
+        },
+        {
+            "medicine_a": "Exenatide",
+            "medicine_b": "Warfarin",
+            "description": "Incretin mimetics can alter coagulation metrics unpredictably increasing bleeding."
+        },
+        {
+            "medicine_a": "Alendronate",
+            "medicine_b": "Calcium Carbonate",
+            "description": "Calcium explicitly blocks the absorption of bisphosphonates; must space by 2 hours."
+        },
+        {
+            "medicine_a": "Colchicine",
+            "medicine_b": "Atorvastatin",
+            "description": "Heightens the development of skeletal muscle myopathy and muscle death."
+        },
+        {
+            "medicine_a": "Febuxostat",
+            "medicine_b": "Azathioprine",
+            "description": "Febuxostat raises azathioprine to dangerous levels risking complete immune failure."
+        },
+        {
+            "medicine_a": "Prednisone",
+            "medicine_b": "Amphotericin B",
+            "description": "Synergistic potassium wasting causes severe life-threatening hypokalemia."
+        },
+        {
+            "medicine_a": "Tamoxifen",
+            "medicine_b": "Paroxetine",
+            "description": "Paroxetine stops the activation of tamoxifen rendering breast cancer therapy ineffective."
+        },
+        {
+            "medicine_a": "Anastrozole",
+            "medicine_b": "Tamoxifen",
+            "description": "Co-administration reduces anastrozole concentration; do not combine."
+        },
+        {
+            "medicine_a": "Methotrexate",
+            "medicine_b": "Hydrochlorothiazide",
+            "description": "Increases methotrexate levels by reducing renal transport risking toxicity."
+        },
+        {
+            "medicine_a": "Cyclosporine",
+            "medicine_b": "Ciprofloxacin",
+            "description": "Enhances the risk of acute severe structural nephrotoxicity."
+        },
+        {
+            "medicine_a": "Tacrolimus",
+            "medicine_b": "Erythromycin",
+            "description": "Massive macrolide metabolic block risks severe fatal immunosuppressant toxicity."
+        }
+    ]
+}
